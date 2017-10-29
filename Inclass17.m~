@@ -30,7 +30,7 @@ img2_align((801-pos(1)):(1600-pos(1)),(801-pos(2)):(1600-pos(2))) = img2;
 figure(3)
 imshowpair(img1,img2_align)
 
-
+%{
 %fourier
 img1f = fft2(img1);
 img2f = fft2(img2);
@@ -46,3 +46,4 @@ img_shift = zeros(size(img1)+size(img2)-[row_shift,col_shift]);
 img_shift((end-799):end,(end-799):end)=img2;
 figure(4)
 imshowpair(img1,img_shift);
+%}
